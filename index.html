@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>momvin — стильний одяг для вагітних</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f0f5;--surface:#fff;--ink:#2a2233;--muted:#675f72;--berry:#6b2d5c;--blush:#ecd0d8;--sage:#f0c9b0;--line:#d9d3e0;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1824;--surface:#292233;--ink:#f0ecf4;--muted:#b3a9c0;--berry:#e3a6d2;--blush:#4a2f46;--sage:#e6b595;--line:#3d3449;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d1824;--surface:#292233;--ink:#f0ecf4;--muted:#b3a9c0;--berry:#e3a6d2;--blush:#4a2f46;--sage:#e6b595;--line:#3d3449;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.08;margin:0}
+h1{font-size:clamp(2.8rem,8vw,5.6rem);letter-spacing:-.02em}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:.6em}
+h3{font-size:1.5rem;margin-bottom:.3em}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-family:"Cormorant Garamond",serif;font-size:1.9rem;font-weight:600;color:var(--berry);text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--berry)}
+.btn{display:inline-block;background:var(--berry);color:var(--bg);padding:14px 28px;border-radius:999px;text-decoration:none;font-weight:700;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{opacity:.9}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding:70px 0 90px}
+.hero p{font-size:1.15rem;color:var(--muted);margin:1.2em 0 1.8em}
+.hero svg{width:100%;height:auto}
+.stages text{font-family:Manrope,sans-serif;font-size:15px;fill:var(--muted)}
+.prob{background:var(--blush)}
+.prob .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.prob p{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card p{color:var(--muted);margin:0;font-size:.98rem}
+.card.lg{border-radius:28px 6px 28px 6px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
+.tab{font:inherit;font-weight:700;background:transparent;color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:10px 22px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--berry);color:var(--bg);border-color:var(--berry)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.panel ul{margin:0;padding-left:1.1em}
+.panel li{margin-bottom:.5em}
+.panel .tip{background:var(--bg);border-radius:18px;padding:22px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.gift{background:var(--sage);color:#14201a;border-radius:32px;padding:46px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+.gift p{color:#14201a}
+.gift .btn{background:#14201a;color:#f2f0f5}
+.box{border:2px dashed #14201a;border-radius:20px;padding:26px;text-align:center;font-family:"Cormorant Garamond",serif;font-size:2rem}
+.box small{display:block;font:400 .9rem Manrope,sans-serif;margin-top:6px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}.split .card h3{color:var(--berry)}.adv{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 48px}.adv div{border-top:1px solid var(--line);padding:22px 0}.adv p{color:var(--muted);margin:0}.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:0;list-style:none;margin:0}.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}.steps li:before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--blush);color:var(--berry);font-weight:700;margin-bottom:12px}.steps p{margin:0;color:var(--muted);font-size:.98rem}details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-family:"Cormorant Garamond",serif;font-size:1.45rem;font-weight:500}details p{margin:.7em 0 0;color:var(--muted)}.cta{background:var(--berry);color:var(--bg);border-radius:32px;padding:54px 34px;text-align:center}.cta h2{margin-bottom:.4em}.cta p{margin:0 auto 1.6em}.cta .btn{background:var(--bg);color:var(--berry)}@media(max-width:780px){.split{grid-template-columns:1fr}}.soc{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}.soc a{border:1.5px solid var(--berry);color:var(--berry);border-radius:999px;padding:12px 26px;text-decoration:none;font-weight:700}.soc a:hover{background:var(--berry);color:var(--bg)}.chat-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:20;box-shadow:0 6px 20px rgba(0,0,0,.2)}.chat{position:fixed;right:18px;bottom:calc(80px + env(safe-area-inset-bottom,0px));width:min(370px,calc(100vw - 36px));height:min(500px,70vh);height:min(500px,calc(100dvh - 120px));display:none;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;z-index:20;box-shadow:0 12px 40px rgba(0,0,0,.25)}.chat.open{display:flex}.ch-h{background:var(--berry);color:var(--bg);padding:14px 18px;font-weight:700}.ch-m{flex:1;min-height:0;overflow:auto;padding:14px 14px 24px;display:flex;flex-direction:column;gap:8px;overscroll-behavior:contain}.msg{flex-shrink:0;overflow-wrap:anywhere;max-width:86%;padding:10px 14px;border-radius:16px;font-size:.95rem;line-height:1.45;white-space:pre-wrap}.msg.bot{background:var(--bg);align-self:flex-start}.msg.me{background:var(--berry);color:var(--bg);align-self:flex-end}.ch-q{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}.ch-q button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer}.ch-f{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}.ch-f input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:10px 14px;font:inherit}footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:780px){.hero,.prob .wrap,.panel,.gift{grid-template-columns:1fr}nav{display:none}section{padding:60px 0}.gift{padding:30px}}
+@media(prefers-reduced-motion:no-preference){.bump{animation:grow 1.4s ease-out both}.b2{animation-delay:.25s}.b3{animation-delay:.5s}@keyframes grow{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}.bump{transform-origin:center;transform-box:fill-box}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top"><svg width="42" height="42" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="var(--blush)"/><circle cx="26.5" cy="9.5" r="3" fill="var(--berry)"/><circle cx="31" cy="12" r="5.5" fill="var(--berry)"/><path d="M28 18C25 24 25 30 26 36C25 42 26 50 27 58L34 58C34 52 35 49 36 46C44 46 48 38 45 31C43 26 38 24 34 18Z" fill="var(--berry)"/><circle cx="40.5" cy="36" r="3.2" fill="var(--blush)"/></svg>momvin</a>
+<nav><a href="#about">Про бренд</a><a href="#products">Одяг</a><a href="#why">Переваги</a><a href="#capsule">Капсула</a><a href="#services">Сервіс</a><a href="#gift">Подарунок</a><a href="#faq">Питання</a><a href="#contacts">Контакти</a></nav></div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div>
+<h1>Одяг, що росте разом із вами</h1>
+<p>momvin — український бренд стильного та функціонального одягу для вагітних. Анатомічний крій, натуральні тканини й сучасні тренди на кожному етапі.</p>
+<a class="btn" href="#capsule">Підібрати капсулу</a>
+</div>
+<svg viewBox="0 0 420 380" role="img" aria-label="Три кола зростаючого розміру: перший, другий і третій триместр">
+<g class="stages">
+<circle class="bump" cx="70" cy="250" r="46" fill="var(--blush)"/>
+<circle class="bump b2" cx="190" cy="220" r="78" fill="var(--sage)" opacity=".85"/>
+<circle class="bump b3" cx="332" cy="180" r="112" fill="var(--berry)" opacity=".9"/>
+<text x="70" y="330" text-anchor="middle">I триместр</text>
+<text x="190" y="330" text-anchor="middle">II триместр</text>
+<text x="332" y="330" text-anchor="middle">III триместр</text>
+</g></svg>
+</div>
+
+<section class="prob" id="about"><div class="wrap">
+<div><h2>Вагітність — не привід носити мішкувате</h2></div>
+<div>
+<p>Більшість мас-маркет брендів не адаптовані до змін тіла. Жінки купують одяг на кілька розмірів більший або обирають безформний оверсайз, який не підтримує і сидить невдало. Через це перестають почуватися привабливими та жіночними.</p>
+<p>momvin прибирає цей бар’єр: розумний крій, що росте разом із животиком, натуральні матеріали й актуальні тренди, адаптовані під потреби вагітних.</p>
+</div></div></section>
+
+<section id="products"><div class="wrap">
+<h2>Що є в асортименті</h2>
+<div class="grid">
+<div class="card lg"><h3>Базовий і капсульний одяг</h3><p>Сукні, костюми, легінси з м’якою підтримкою живота, джинси та штани на еластичному поясі, базові топи й футболки.</p></div>
+<div class="card lg"><h3>Для дому та пологового</h3><p>Халати, сорочки з функцією годування, піжами.</p></div>
+<div class="card lg"><h3>Спеціальна білизна</h3><p>Бюстгальтери для годування та анатомічні бандажі.</p></div>
+<div class="card lg"><h3>Сукні та костюми</h3><p>Актуальні фасони, у яких комфортно і на роботі, і на прогулянці, і на фотосесії.</p></div>
+<div class="card lg"><h3>Легінси, джинси, штани</h3><p>М’яка підтримка живота й еластичний пояс, що росте разом із вами.</p></div>
+<div class="card lg"><h3>Топи й футболки</h3><p>База для щоденних образів із натуральних тканин, що дихають.</p></div>
+</div></div></section>
+
+<section id="audience" style="background:var(--surface)"><div class="wrap">
+<h2>Для кого momvin</h2>
+<div class="split">
+<div class="card"><h3>Майбутні мами</h3><p>Дівчата й жінки від 20 до 35 років з міст України, які чекають на дитину, активні в Instagram і TikTok. Вони цінують комфорт і тренди та хочуть виглядати стильно на будь-якому терміні.</p></div>
+<div class="card"><h3>Ті, хто обирає подарунок</h3><p>Чоловіки, що шукають корисний і гарний подарунок для вагітної дружини, та рідні, які хочуть подарувати якісний і практичний одяг.</p></div>
+</div></div></section>
+
+<section id="why"><div class="wrap">
+<h2>Чому momvin</h2>
+<div class="adv">
+<div><h3>Анатомічний крій</h3><p>Спеціальні лекала й еластичні вставки адаптуються до змін фігури, тож не потрібно купувати речі на кілька розмірів більші.</p></div>
+<div><h3>Натуральні тканини</h3><p>Дихаючі матеріали, приємні до тіла в кожному триместрі. До замовлення додаємо рекомендації з догляду.</p></div>
+<div><h3>Естетика й тренди</h3><p>Жодних «бабусиних» фасонів: актуальні капсули, у яких жінка почувається впевнено.</p></div>
+<div><h3>Практичні деталі</h3><p>Функція годування в сорочках і халатах, м’яка підтримка живота в легінсах.</p></div>
+<div><h3>Преміальне пакування</h3><p>Кожне замовлення приходить у брендовому пакуванні, а подарунки — у Momi Box.</p></div>
+<div><h3>Підтримка поруч</h3><p>Турботлива допомога в онлайн-чаті та консультації стиліста на всіх етапах.</p></div>
+</div></div></section>
+
+<section id="capsule" style="background:var(--surface)"><div class="wrap">
+<h2>Гардероб за триместрами</h2>
+<p style="color:var(--muted)">Оберіть етап — і побачите, на що звернути увагу під час підбору капсули.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-i="0">I триместр</button>
+<button class="tab" role="tab" aria-selected="false" data-i="1">II триместр</button>
+<button class="tab" role="tab" aria-selected="false" data-i="2">III триместр</button>
+</div>
+<div class="panel" id="panel" role="tabpanel"></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<h2>Сервіс «турбота під ключ»</h2>
+<div class="services">
+<div class="card"><h3>Консультація стиліста</h3><p>Онлайн або офлайн: допоможемо зібрати капсульний гардероб на різні триместри вагітності.</p></div>
+<div class="card"><h3>Розрахунок розміру</h3><p>Індивідуально за вашими параметрами, щоб річ сиділа так, як потрібно.</p></div>
+<div class="card"><h3>Підтримка в чаті</h3><p>Онлайн-чат і рекомендації з догляду за тканинами, а кожне замовлення — у преміальному брендовому пакуванні.</p></div>
+</div>
+<p style="margin-top:36px;color:var(--muted)">Гарантія зручності: еластичні вставки та спеціальні лекала адаптуються до змін фігури.</p>
+</div></section>
+
+<section id="gift"><div class="wrap">
+<div class="gift">
+<div><h2>Momi Box — набір для виписки</h2>
+<p>Подарунковий набір для виписки з пологового будинку. Для чоловіків і рідних, які хочуть подарувати щось красиве, якісне й практичне.</p>
+<a class="btn" href="#services">Дізнатися більше</a></div>
+<div class="box">Momi Box<small>для виписки з пологового</small></div>
+</div></div></section>
+<section id="how"><div class="wrap">
+<h2>Як підібрати гардероб</h2>
+<ol class="steps">
+<li><h3>Розкажіть про себе</h3><p>Термін вагітності, стиль, ваші щоденні сценарії.</p></li>
+<li><h3>Розрахуйте розмір</h3><p>Ми індивідуально підберемо розмір за вашими параметрами.</p></li>
+<li><h3>Зберіть капсулу</h3><p>Стиліст запропонує речі, які поєднуються між собою і змінюються разом із фігурою.</p></li>
+<li><h3>Отримайте замовлення</h3><p>Преміальне пакування й поради з догляду за тканинами.</p></li>
+</ol></div></section>
+
+<section id="faq" style="background:var(--surface)"><div class="wrap">
+<h2>Часті питання</h2>
+<details open><summary>Як вибрати розмір?</summary><p>Ми розраховуємо розмір індивідуально за вашими параметрами. Також допоможе стиліст в онлайн-чаті.</p></details>
+<details><summary>Чи можна носити речі протягом усієї вагітності?</summary><p>Так, крій і еластичні вставки розраховані на зміни фігури. Для різних триместрів ми збираємо капсули.</p></details>
+<details><summary>З яких тканин пошито одяг?</summary><p>Ми використовуємо натуральні дихаючі тканини. До кожного замовлення додаємо рекомендації з догляду.</p></details>
+<details><summary>Що таке Momi Box?</summary><p>Подарунковий набір для виписки з пологового будинку, який можна замовити для близьких.</p></details>
+<details><summary>Чи є консультації стиліста?</summary><p>Так, онлайн та офлайн. Стиліст допоможе скласти капсульний гардероб на різні триместри.</p></details>
+</div></section>
+
+<section><div class="wrap"><div class="cta"><h2>Почніть із капсули для вашого терміну</h2><p>Оберіть триместр і дізнайтеся, з чого почати гардероб.</p><a class="btn" href="#capsule">Обрати триместр</a></div></div></section>
+<section id="contacts" style="padding-top:0"><div class="wrap" style="text-align:center"><h2>Напишіть нам</h2><p style="margin:0 auto 1.4em;color:var(--muted)">Оберіть зручний месенджер — відповімо та допоможемо з вибором.</p>
+<div class="soc"><a href="https://t.me/momvin_shop" target="_blank" rel="noopener">Telegram</a><a href="https://instagram.com/momvin_shop" target="_blank" rel="noopener">Instagram</a><a href="viber://chat?number=%2B380000000000" rel="noopener">Viber</a><a href="https://wa.me/380000000000" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:k.vynnyk_femp_16_24_b_d@knute.edu.ua">Пошта</a></div></div></section>
+</main>
+
+<footer><div class="wrap"><span><strong style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--berry)">momvin</strong><br>Стильний одяг для вагітних: м’яко, естетично, з турботою про вас і малюка.</span>
+<span>© Винник Катерина Андріївна, 2026<br><a href="mailto:k.vynnyk_femp_16_24_b_d@knute.edu.ua">k.vynnyk_femp_16_24_b_d@knute.edu.ua</a></span></div></footer>
+
+<button class="btn chat-fab" id="cf" aria-expanded="false">Онлайн-чат</button>
+<div class="chat" id="ch" role="dialog" aria-label="Онлайн-чат momvin"><div class="ch-h">Чат momvin</div><div class="ch-m" id="cm" aria-live="polite"></div><div class="ch-q" id="cq"></div><div class="ch-f"><input id="ci" placeholder="Напишіть повідомлення" aria-label="Повідомлення"><button class="btn" id="cs" style="padding:10px 18px">Надіслати</button></div></div>
+<script>
+var D=[{t:"Комфорт без тиску",l:["Базові топи й футболки з м’яких натуральних тканин","Легінси з м’якою підтримкою живота","Сорочки та піжами для дому"],s:"Фігура ще змінюється непомітно, тож головне — тканини, що дихають, і вільний крій у талії."},
+{t:"Тренд і підтримка",l:["Сукні та костюми з анатомічним кроєм","Джинси та штани на еластичному поясі","Бюстгальтери для годування й анатомічні бандажі"],s:"Живіт росте активно. Обирайте речі з еластичними вставками, які адаптуються до фігури."},
+{t:"Дім і пологовий",l:["Халати та сорочки з функцією годування","Зручна білизна й бандаж","Комплект для виписки — Momi Box"],s:"Час збирати речі для пологового будинку та перших днів із малюком."}];
+var tabs=document.querySelectorAll(".tab"),p=document.getElementById("panel");
+function show(i){tabs.forEach(function(b,j){b.setAttribute("aria-selected",j==i)});
+p.innerHTML="<div><h3>"+D[i].t+"</h3><ul>"+D[i].l.map(function(x){return"<li>"+x+"</li>"}).join("")+"</ul></div><div class='tip'>"+D[i].s+"</div>"}
+tabs.forEach(function(b){b.addEventListener("click",function(){show(+b.dataset.i)})});
+show(0);
+var H=[],busy=false,cm=document.getElementById("cm"),ci=document.getElementById("ci"),ch=document.getElementById("ch"),cf=document.getElementById("cf"),cq=document.getElementById("cq");
+var SYS="Ти — ввічлива онлайн-консультантка українського бренду momvin (стильний одяг для вагітних). Відповідай українською, тепло, коротко (до 4 речень). Факти: асортимент — сукні, костюми, легінси з м’якою підтримкою живота, джинси й штани на еластичному поясі, топи й футболки, халати, сорочки й піжами з функцією годування, бюстгальтери для годування, анатомічні бандажі; натуральні дихаючі тканини; еластичні вставки й спеціальні лекала; послуги — консультація стиліста онлайн і офлайн, індивідуальний розрахунок розміру за параметрами, подарунковий набір Momi Box для виписки; преміальне пакування; рекомендації з догляду. Не вигадуй цін, наявності, термінів доставки, акцій і медичних порад (про здоров’я — до лікаря). Якщо не знаєш — порадь написати в Telegram @momvin_shop або на пошту k.vynnyk_femp_16_24_b_d@knute.edu.ua.";
+function add(t,c){var d=document.createElement("div");d.className="msg "+c;d.textContent=t;cm.appendChild(d);requestAnimationFrame(function(){cm.scrollTop=cm.scrollHeight});return d}
+add("Привіт! Я помічниця momvin. Допоможу з вибором одягу, розміром і Momi Box. Що вас цікавить?","bot");
+["Як підібрати одяг","Як визначити розмір","Що таке Momi Box"].forEach(function(q){var b=document.createElement("button");b.textContent=q;b.onclick=function(){send(q)};cq.appendChild(b)});
+async function send(t){t=(t||"").trim();if(busy||!t)return;ci.value="";cq.style.display="none";add(t,"me");busy=true;var w=add("…","bot");H.push({r:"Клієнтка",t:t});H=H.slice(-8);
+try{var s=window.claude&&await claude.use("sample");if(!s)throw 0;var p=SYS+"\n\nРозмова:\n"+H.map(function(m){return m.r+": "+m.t}).join("\n")+"\nКонсультантка:";var r=await s(p,{cache:false});w.textContent=r.text;H.push({r:"Консультантка",t:r.text})}
+catch(e){w.textContent="Автовідповідь зараз недоступна. Напишіть нам у Telegram @momvin_shop або на пошту k.vynnyk_femp_16_24_b_d@knute.edu.ua — відповімо найближчим часом."}
+busy=false;requestAnimationFrame(function(){cm.scrollTop=cm.scrollHeight})}
+document.getElementById("cs").onclick=function(){send(ci.value)};
+ci.addEventListener("keydown",function(e){if(e.key==="Enter")send(ci.value)});
+function tog(o){ch.classList.toggle("open",o);cf.setAttribute("aria-expanded",o);cf.textContent=o?"Закрити":"Онлайн-чат";if(o)ci.focus()}
+cf.onclick=function(){tog(!ch.classList.contains("open"))};
+document.addEventListener("keydown",function(e){if(e.key==="Escape")tog(false)});
+</script>
+</body>
+</html>
